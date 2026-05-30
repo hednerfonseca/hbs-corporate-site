@@ -15,6 +15,7 @@ export function Footer({ locale, content }: Props) {
         <p>{content.footer.summary}</p>
       </div>
       <div className="footer-links">
+        <Link href={localizePath(locale, "/ecossistema-horonho")}>{content.sections.ecosystemTitle}</Link>
         <Link href={localizePath(locale, "/privacidade")}>{content.pages.privacidade.title}</Link>
         <Link href={localizePath(locale, "/termos")}>{content.pages.termos.title}</Link>
       </div>

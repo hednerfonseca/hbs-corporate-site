@@ -8,12 +8,29 @@ import { isLocale, localizePath } from "@/lib/i18n";
 
 type Props = { params: Promise<{ locale: string }> };
 
+const bridgeCopy = {
+  pt: "Construímos pontes entre negócios, instituições e inovação.",
+  fr: "Nous construisons des ponts entre affaires, institutions et innovation.",
+  en: "We build bridges between business, institutions and innovation."
+};
+
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   if (!isLocale(locale)) return {};
   return {
     title: content[locale].meta.title,
     description: content[locale].meta.description,
+    keywords: [
+      "Guiné-Bissau",
+      "Business Consulting Guinea-Bissau",
+      "Strategic Consulting Africa",
+      "Institutional Affairs",
+      "Digital Transformation",
+      "Artificial Intelligence Africa",
+      "HORONHO BUSINESS SOLUTION",
+      "MATU GARANDI"
+    ],
     alternates: { canonical: `/${locale}` }
   };
 }
@@ -39,9 +56,10 @@ export default async function Home({ params }: Props) {
           <p className="eyebrow">{pageContent.hero.eyebrow}</p>
           <h1>{pageContent.hero.title}</h1>
           <p>{pageContent.hero.text}</p>
+          <p className="bridge-line">{bridgeCopy[locale]}</p>
           <div className="hero-actions">
             <Link className="button" href={localizePath(locale, "/contacto")}>{pageContent.hero.primary}</Link>
-            <Link className="button secondary" href={localizePath(locale, "/projectos")}>{pageContent.hero.secondary}</Link>
+            <Link className="button secondary" href={localizePath(locale, "/projectos-estrategicos")}>{pageContent.hero.secondary}</Link>
           </div>
         </div>
       </section>
@@ -55,15 +73,55 @@ export default async function Home({ params }: Props) {
           <h2>{pageContent.sections.companyTitle}</h2>
           <p>{pageContent.sections.companyText}</p>
         </div>
+        <div className="operating-model" aria-label={pageContent.operatingModel.title}>
+          {pageContent.operatingModel.items.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="section alt">
         <div className="section-heading">
-          <h2>{pageContent.sections.servicesTitle}</h2>
+          <h2>{pageContent.sections.areasTitle}</h2>
           <p>{pageContent.pages.servicos.intro}</p>
         </div>
         <div className="service-grid">
           {pageContent.services.map((service) => <ServiceCard key={service.title} {...service} />)}
+        </div>
+      </section>
+
+      <section className="section leadership-home">
+        <div className="section-heading">
+          <h2>{pageContent.sections.leadershipTitle}</h2>
+          <p>{pageContent.sections.leadershipText}</p>
+        </div>
+        <div className="leadership-card">
+          <div>
+            <span>{pageContent.leadership.role}</span>
+            <h3>{pageContent.leadership.name}</h3>
+            <p>{pageContent.leadership.summary}</p>
+          </div>
+          <div>
+            {pageContent.leadership.areas.map((area) => <span key={area}>{area}</span>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-heading">
+          <h2>{pageContent.sections.whyTitle}</h2>
+          <p>{pageContent.sections.partnersText}</p>
+        </div>
+        <div className="why-grid">
+          {pageContent.whyChoose.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -74,6 +132,20 @@ export default async function Home({ params }: Props) {
         </div>
         <div className="project-list">
           {pageContent.projects.map((project) => <ProjectCard key={project.title} locale={locale} {...project} />)}
+        </div>
+      </section>
+
+      <section className="section alt">
+        <div className="section-heading">
+          <h2>{pageContent.sections.ecosystemTitle}</h2>
+          <p>{pageContent.sections.ecosystemText}</p>
+        </div>
+        <div className="future-grid integration-grid">
+          <h3>{pageContent.sections.futureTitle}</h3>
+          <div>
+            {pageContent.futureIntegrations.map((item) => <span key={item}>{item}</span>)}
+          </div>
+          <p>{pageContent.sections.futureText}</p>
         </div>
       </section>
 

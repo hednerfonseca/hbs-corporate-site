@@ -178,6 +178,12 @@ h3 {
   max-width: 640px;
 }
 
+.bridge-line {
+  color: #d8c375;
+  font-weight: 800;
+  margin-top: 18px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -280,6 +286,252 @@ h3 {
 .project-card a {
   color: var(--accent-strong);
   font-weight: 800;
+}
+
+.project-card strong {
+  display: block;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  margin: -4px 0 16px;
+}
+
+.operating-model {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.operating-model article {
+  background: var(--soft);
+  min-height: 190px;
+  padding: 28px;
+}
+
+.operating-model p,
+.ecosystem-row p,
+.matu-layout p,
+.why-grid p,
+.institutional-grid p,
+.matu-development p {
+  color: var(--muted);
+}
+
+.why-grid,
+.institutional-grid,
+.matu-development {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.why-grid article,
+.institutional-grid article,
+.matu-development article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  min-height: 190px;
+  padding: 28px;
+}
+
+.leadership-card {
+  align-items: center;
+  background: var(--ink);
+  color: var(--white);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.9fr);
+  padding: clamp(32px, 5vw, 58px);
+}
+
+.leadership-card p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.leadership-card span,
+.status-banner {
+  color: var(--gold);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.leadership-card > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.leadership-card > div:last-child span {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  color: var(--white);
+  padding: 10px 13px;
+}
+
+.status-banner {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  color: var(--accent-strong);
+  display: inline-flex;
+  margin-bottom: 28px;
+  padding: 12px 16px;
+}
+
+.institutional-grid {
+  margin-top: 56px;
+}
+
+.institutional-grid .wide,
+.matu-development article {
+  grid-column: span 2;
+}
+
+.institutional-grid .commitment {
+  background: var(--soft);
+}
+
+.institutional-grid .section-label {
+  background: transparent;
+  border-color: transparent;
+  min-height: auto;
+  padding: 18px 0 4px;
+}
+
+.matu-section {
+  background: linear-gradient(135deg, #f8f5ea 0%, #ffffff 48%, #edf4ee 100%);
+}
+
+.matu-layout {
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+}
+
+.eyebrow.dark {
+  color: var(--accent-strong);
+}
+
+.matu-panel {
+  background: var(--ink);
+  color: var(--white);
+  padding: 34px;
+}
+
+.matu-panel li {
+  margin-bottom: 10px;
+}
+
+.matu-story {
+  border-top: 1px solid var(--line);
+  margin-top: 34px;
+  padding-top: 28px;
+}
+
+.matu-story h3 + p {
+  margin-bottom: 28px;
+}
+
+.matu-development {
+  margin-top: 42px;
+}
+
+.matu-development ul {
+  color: var(--muted);
+  margin: 0;
+  padding-left: 18px;
+}
+
+.future-grid {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 28px;
+  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 1fr);
+  margin-top: 56px;
+  padding-top: 34px;
+}
+
+.future-grid div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.future-grid span {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 10px 14px;
+}
+
+.integration-grid p {
+  color: var(--muted);
+  grid-column: 2;
+  margin: 0;
+}
+
+.ecosystem-list {
+  border-top: 1px solid var(--line);
+}
+
+.ecosystem-structure {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 48px;
+}
+
+.ecosystem-structure article {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  min-height: 220px;
+  padding: 30px;
+}
+
+.ecosystem-structure span {
+  color: var(--accent-strong);
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.ecosystem-structure ul {
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.8;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.ecosystem-structure a {
+  color: var(--accent-strong);
+}
+
+.ecosystem-row {
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 120px minmax(180px, 0.7fr) minmax(160px, 0.55fr) minmax(0, 1fr);
+  padding: 26px 0;
+}
+
+.ecosystem-row span {
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.ecosystem-row strong {
+  color: var(--muted);
+}
+
+.ecosystem-row a {
+  color: var(--accent-strong);
 }
 
 .partner-cta {
@@ -399,6 +651,18 @@ h3 {
   .trust-strip,
   .service-grid,
   .project-list,
+  .operating-model,
+  .why-grid,
+  .institutional-grid,
+  .institutional-grid .wide,
+  .institutional-grid .commitment,
+  .leadership-card,
+  .matu-development,
+  .matu-development article,
+  .matu-layout,
+  .future-grid,
+  .ecosystem-row,
+  .ecosystem-structure,
   .section-heading,
   .content-columns,
   .site-footer {
