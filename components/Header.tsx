@@ -24,7 +24,7 @@ export function Header({ locale, content }: Props) {
   return (
     <header className="site-header">
       <Link href={localizePath(locale)} className="brand" aria-label="HORONHO home">
-        <img src="/brand/horonho-logo.svg" alt="HORONHO Business Solution" />
+        <img src="/brand/horonho-logo.png" alt="HORONHO Business Solution, SARL" />
         <span>HORONHO</span>
         <small>Business Solution</small>
       </Link>

@@ -53,7 +53,7 @@ export default async function Home({ params }: Props) {
     <main>
       <section className="hero">
         <div className="hero-content">
-          <img className="hero-logo" src="/brand/horonho-logo.svg" alt="" aria-hidden="true" />
+          <img className="hero-logo" src="/brand/horonho-logo.png" alt="HORONHO Business Solution, SARL" />
           <p className="eyebrow">{pageContent.hero.eyebrow}</p>
           <h1>{pageContent.hero.title}</h1>
           <p>{pageContent.hero.text}</p>

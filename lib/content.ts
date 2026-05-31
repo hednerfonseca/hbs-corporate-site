@@ -368,7 +368,7 @@ export const content: Record<Locale, SiteContent> = {
     cta: "Fale Connosco",
     hero: {
       eyebrow: "Empresa independente de estratégia, tecnologia e desenvolvimento institucional",
-      title: "HORONHO BUSINESS SOLUTION",
+      title: "HORONHO BUSINESS SOLUTION, SARL",
       text: "Consultoria estratégica, assuntos institucionais, desenvolvimento empresarial e inovação digital.",
       primary: "Fale Connosco",
       secondary: "Ver projectos estratégicos"
@@ -462,7 +462,7 @@ export const content: Record<Locale, SiteContent> = {
       { label: "Contact", href: "/contacto" }
     ],
     cta: "Nous Contacter",
-    hero: { eyebrow: "Entreprise indépendante de stratégie, technologie et développement institutionnel", title: "HORONHO BUSINESS SOLUTION", text: "Nous opérons à travers services professionnels, projets stratégiques et plateformes d'innovation pour créer une valeur économique, institutionnelle et culturelle.", primary: "Prendre contact", secondary: "Voir les projets" },
+    hero: { eyebrow: "Entreprise indépendante de stratégie, technologie et développement institutionnel", title: "HORONHO BUSINESS SOLUTION, SARL", text: "Nous opérons à travers services professionnels, projets stratégiques et plateformes d'innovation pour créer une valeur économique, institutionnelle et culturelle.", primary: "Prendre contact", secondary: "Voir les projets" },
     trust: ["Services professionnels", "Projets stratégiques", "Plateformes d'innovation", "Représentation commerciale"],
     operatingModel: { title: "Modèle d'action", items: [
       { title: "Services professionnels", text: "Conseil, développement commercial, transformation digitale, IA et affaires institutionnelles." },
@@ -499,7 +499,7 @@ export const content: Record<Locale, SiteContent> = {
       { label: "Contact", href: "/contacto" }
     ],
     cta: "Contact Us",
-    hero: { eyebrow: "Independent company for strategy, technology and institutional development", title: "HORONHO BUSINESS SOLUTION", text: "We operate through professional services, strategic projects and innovation platforms to create business, institutional and cultural value.", primary: "Start contact", secondary: "View strategic projects" },
+    hero: { eyebrow: "Independent company for strategy, technology and institutional development", title: "HORONHO BUSINESS SOLUTION, SARL", text: "We operate through professional services, strategic projects and innovation platforms to create business, institutional and cultural value.", primary: "Start contact", secondary: "View strategic projects" },
     trust: ["Professional services", "Strategic projects", "Innovation platforms", "Commercial representation"],
     operatingModel: { title: "Operating model", items: [
       { title: "Professional Services", text: "Consulting, business development, digital transformation, AI and institutional affairs." },
