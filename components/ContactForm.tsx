@@ -8,6 +8,7 @@ export function ContactForm({ content }: Props) {
   return (
     <form className="contact-form" action="/api/contact" method="post">
       <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden-field" aria-hidden="true" />
+      <input type="hidden" name="funnel" value="general_contact" />
       <label>
         {content.form.name}
         <input name="name" minLength={2} maxLength={120} required />

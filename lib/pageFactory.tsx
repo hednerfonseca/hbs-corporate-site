@@ -3,7 +3,7 @@ import { StandardPage } from "@/components/StandardPage";
 import { content } from "@/lib/content";
 import { isLocale } from "@/lib/i18n";
 
-export type PageKey = "sobre" | "servicos" | "projectos" | "matu" | "ecossistema" | "centroFinanceiro" | "assuntos" | "parcerias" | "contacto" | "privacidade" | "termos";
+export type PageKey = "sobre" | "servicos" | "projectos" | "matu" | "ecossistema" | "centroFinanceiro" | "assuntos" | "credibilidade" | "proposta" | "parcerias" | "contacto" | "privacidade" | "termos";
 
 export type LocaleParams = { params: Promise<{ locale: string }> };
 

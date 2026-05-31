@@ -1,12 +1,13 @@
 import Link from "next/link";
 import { ContactForm } from "./ContactForm";
 import { PageHeader } from "./PageHeader";
+import { ProposalForm } from "./ProposalForm";
 import { ProjectCard } from "./ProjectCard";
 import { ServiceCard } from "./ServiceCard";
 import { SiteContent } from "@/lib/content";
 import { Locale, localizePath } from "@/lib/i18n";
 
-type PageKey = "sobre" | "servicos" | "projectos" | "matu" | "ecossistema" | "centroFinanceiro" | "assuntos" | "parcerias" | "contacto" | "privacidade" | "termos";
+type PageKey = "sobre" | "servicos" | "projectos" | "matu" | "ecossistema" | "centroFinanceiro" | "assuntos" | "credibilidade" | "proposta" | "parcerias" | "contacto" | "privacidade" | "termos";
 
 type Props = {
   locale: Locale;
@@ -185,6 +186,65 @@ export function StandardPage({ locale, content, pageKey }: Props) {
           </div>
         </section>
       )}
+      {pageKey === "credibilidade" && (
+        <section className="section">
+          <div className="section-heading">
+            <h2>{content.pages.credibilidade.title}</h2>
+            <p>{content.credibility.founderText}</p>
+          </div>
+          <div className="leadership-card credibility-leadership">
+            <div>
+              <span>{content.leadership.role}</span>
+              <h3>{content.leadership.name}</h3>
+              <p>{content.leadership.summary}</p>
+            </div>
+            <div>
+              {content.credibility.experience.map((item) => <span key={item}>{item}</span>)}
+            </div>
+          </div>
+          <div className="section-heading compact-heading">
+            <h2>{content.credibility.proofTitle}</h2>
+            <p>{content.pages.credibilidade.intro}</p>
+          </div>
+          <div className="why-grid">
+            {content.credibility.proofItems.map((item) => (
+              <article key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+          <div className="future-grid integration-grid">
+            <h3>{content.credibility.certificatesTitle}</h3>
+            <div>
+              {content.credibility.certificates.map((item) => <span key={item}>{item}</span>)}
+            </div>
+            <p>{content.credibility.galleryText}</p>
+          </div>
+        </section>
+      )}
+      {pageKey === "proposta" && (
+        <section className="section">
+          <div className="section-heading">
+            <h2>{content.funnels.title}</h2>
+            <p>{content.funnels.text}</p>
+          </div>
+          <div className="funnel-grid">
+            {content.funnels.items.map((item) => (
+              <article key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                <Link className="button small" href={localizePath(locale, item.href)}>{item.action}</Link>
+              </article>
+            ))}
+          </div>
+          <div className="proposal-panel">
+            <h3>{content.pages.proposta.title}</h3>
+            <p>{content.pages.proposta.intro}</p>
+            <ProposalForm content={content} locale={locale} />
+          </div>
+        </section>
+      )}
       {pageKey === "contacto" && (
         <section className="section narrow">
           <h2>{content.sections.contactTitle}</h2>
@@ -192,7 +252,7 @@ export function StandardPage({ locale, content, pageKey }: Props) {
           <ContactForm content={content} />
         </section>
       )}
-      {!["servicos", "projectos", "matu", "ecossistema", "centroFinanceiro", "assuntos", "contacto"].includes(pageKey) && (
+      {!["servicos", "projectos", "matu", "ecossistema", "centroFinanceiro", "assuntos", "credibilidade", "proposta", "contacto"].includes(pageKey) && (
         <section className="section">
           <div className="content-columns">
             <div>

@@ -15,7 +15,7 @@ export function PartnerCTA({ locale, title, text, action }: Props) {
         <h2>{title}</h2>
         <p>{text}</p>
       </div>
-      <Link className="button" href={localizePath(locale, "/contacto")}>
+      <Link className="button" href={localizePath(locale, "/solicitar-proposta")}>
         {action}
       </Link>
     </section>

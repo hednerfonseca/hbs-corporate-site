@@ -15,6 +15,9 @@
 - [ ] Confirm the Institutional Affairs page includes government relations, business diplomacy, international cooperation, institutional representation and stakeholder management.
 - [ ] Confirm Leadership profile displays Hedner Humberto Gomes da Fonseca as Founder.
 - [ ] Confirm all investor and international partner language is strategic, credible and not exaggerated.
+- [ ] Confirm credibility claims are backed by real documents, photos or certificates before public launch.
+- [ ] Confirm placeholder gallery text is replaced only with approved real images.
+- [ ] Confirm each commercial funnel routes to the right contact or project page.
 - [ ] Decide whether prices or commercial offers should appear publicly in the institutional site.
 - [ ] Review Portuguese, French and English copy with an institutional reviewer.
 
@@ -22,6 +25,11 @@
 
 - [ ] Set `NEXT_PUBLIC_SITE_URL` in Vercel.
 - [ ] Connect contact form to Supabase or approved CRM.
+- [ ] Add analytics stack: Google Analytics and Microsoft Clarity, if approved.
+- [ ] Plan Supabase tables for leads, proposal requests, partnerships, proofs and future client area.
+- [ ] Create Supabase tables from `SUPABASE_SETUP.md`.
+- [ ] Configure `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_TOKEN`, `NEXT_PUBLIC_GA_MEASUREMENT_ID` and `NEXT_PUBLIC_CLARITY_PROJECT_ID` in Vercel.
+- [ ] Test `/pt/admin` with the private admin token.
 - [ ] Add rate limiting or Turnstile before public launch.
 - [ ] Configure transactional email for contact notifications.
 - [ ] Add analytics with privacy-conscious defaults.

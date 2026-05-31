@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
+import { insertRecord } from "@/lib/supabase";
 
 type ContactPayload = {
+  funnel?: string;
   name: string;
   email: string;
   organization?: string;
@@ -35,6 +37,7 @@ export async function POST(request: Request) {
   }
 
   const payload: ContactPayload = {
+    funnel: clean(formData.get("funnel")) || "general_contact",
     name: clean(formData.get("name")),
     email: clean(formData.get("email")),
     organization: clean(formData.get("organization")),
@@ -47,12 +50,19 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, errors }, { status: 400 });
   }
 
-  // Future Supabase integration point: insert payload into a protected leads table.
-  console.info("HORONHO contact request", {
-    subject: payload.subject,
+  const result = await insertRecord("leads", {
+    funnel: payload.funnel,
+    name: payload.name,
     email: payload.email,
-    organization: payload.organization || null
+    organization: payload.organization || null,
+    subject: payload.subject,
+    message: payload.message,
+    source: "website_contact"
   });
 
-  return NextResponse.json({ ok: true }, { status: 202 });
+  if (!result.ok) {
+    console.warn("HORONHO contact request was not stored", result.error);
+  }
+
+  return NextResponse.json({ ok: true, stored: result.ok, crmConfigured: result.configured }, { status: 202 });
 }

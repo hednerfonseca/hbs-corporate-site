@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n";
 
-const routes = ["", "/sobre", "/servicos", "/projectos-estrategicos", "/matu-garandi", "/ecossistema-horonho", "/centro-financeiro-hbs", "/assuntos-institucionais", "/parcerias", "/contacto", "/privacidade", "/termos"];
+const routes = ["", "/sobre", "/servicos", "/projectos-estrategicos", "/matu-garandi", "/ecossistema-horonho", "/centro-financeiro-hbs", "/assuntos-institucionais", "/credibilidade-institucional", "/solicitar-proposta", "/parcerias", "/contacto", "/privacidade", "/termos"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://horonho.com";
