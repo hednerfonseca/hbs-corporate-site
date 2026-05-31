@@ -53,14 +53,13 @@ export default async function Home({ params }: Props) {
     <main>
       <section className="hero">
         <div className="hero-content">
-          <img className="hero-logo" src="/brand/horonho-logo.png" alt="HORONHO Business Solution, SARL" />
+          <img className="hero-logo" src="/brand/horonho-logo-clean.png" alt="HORONHO Business Solution, SARL" />
           <p className="eyebrow">{pageContent.hero.eyebrow}</p>
           <h1>{pageContent.hero.title}</h1>
           <p>{pageContent.hero.text}</p>
           <p className="bridge-line">{bridgeCopy[locale]}</p>
           <div className="hero-actions">
-            <Link className="button" href={localizePath(locale, "/contacto")}>{pageContent.hero.primary}</Link>
-            <Link className="button secondary" href={localizePath(locale, "/projectos-estrategicos")}>{pageContent.hero.secondary}</Link>
+            <Link className="button secondary" href={localizePath(locale, "/sobre")}>{pageContent.hero.primary}</Link>
           </div>
         </div>
       </section>
